@@ -30,8 +30,8 @@ headers = {
 }
 
 # Input and output location 
-input_file_path = 'Dataset/test.csv'
-output_file_path = 'Dataset/output.csv'
+input_file_path = 'test_short.csv'
+output_file_path = 'output_Azure.csv'
 
 
 # Open the input CSV file
