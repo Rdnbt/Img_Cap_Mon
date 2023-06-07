@@ -2,16 +2,16 @@ import csv
 import random
 
 # Path to the original CSV file
-original_csv_file = 'path/to/original_dataset.csv'
+original_csv_file = 'results.csv'
 
 # Path to the new CSV file for the extracted subset
-subset_csv_file = 'path/to/extracted_subset.csv'
+subset_csv_file = 'output_1000.csv'
 
 # Number of image-text pairs to extract
 num_pairs_to_extract = 1000
 
 # Seed for randomization
-seed_value = 42
+seed_value = 9698
 
 # Set the random seed
 random.seed(seed_value)
