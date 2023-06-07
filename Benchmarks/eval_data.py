@@ -1,0 +1,31 @@
+import csv
+import random
+
+# Path to the original CSV file
+original_csv_file = 'test_short.csv'
+
+# Path to the new CSV file for the extracted subset
+subset_csv_file = 'output_10.csv'
+
+# Number of image-text pairs to extract
+num_pairs_to_extract = 5
+
+# Read the original CSV file
+with open(original_csv_file, 'r') as file:
+    reader = csv.reader(file, delimiter='|')
+    header = next(reader)  # Skip the header line
+    rows = list(reader)  # Read all the rows into a list
+
+# Shuffle the rows randomly
+random.shuffle(rows)
+
+# Select the first `num_pairs_to_extract` rows for the subset
+subset_rows = rows[:num_pairs_to_extract]
+
+# Write the subset rows to the new CSV file
+with open(subset_csv_file, 'w', newline='') as file:
+    writer = csv.writer(file, delimiter='|')
+    writer.writerow(header)  # Write the header line
+    writer.writerows(subset_rows)
+
+print(f"Successfully extracted {num_pairs_to_extract} image-text pairs to {subset_csv_file}.")
