@@ -22,11 +22,8 @@ with open(original_csv_file, 'r') as file:
     header = next(reader)  # Skip the header line
     rows = list(reader)  # Read all the rows into a list
 
-# Shuffle the rows randomly
-random.shuffle(rows)
-
-# Select the first `num_pairs_to_extract` rows for the subset
-subset_rows = rows[:num_pairs_to_extract]
+# Select random rows without shuffling
+subset_rows = random.sample(rows, num_pairs_to_extract)
 
 # Write the subset rows to the new CSV file
 with open(subset_csv_file, 'w', newline='') as file:
