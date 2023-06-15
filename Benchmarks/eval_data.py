@@ -11,7 +11,7 @@ subset_csv_file = 'output_1000.csv'
 num_pairs_to_extract = 1000
 
 # Seed for randomization
-seed_value = 1
+seed_value = 9698
 
 # Set the random seed
 random.seed(seed_value)
